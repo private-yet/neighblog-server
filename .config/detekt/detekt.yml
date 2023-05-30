@@ -1,0 +1,76 @@
+build:
+  maxIssues: 0
+  excludeCorrectable: false
+  weights:
+    complexity: 2
+    LongParameterList: 1
+    style: 1
+    comments: 1
+
+config:
+  validation: true
+  warningsAsErrors: false
+  excludes: ''
+
+output-reports:
+  active: true
+  exclude:
+    - 'XmlOutputReport'
+    - 'HtmlOutputReport'
+
+formatting:
+  active: true
+  android: false
+  autoCorrect: true
+  ArgumentListWrapping:
+    active: false
+    autoCorrect: true
+    indentSize: 4
+    maxLineLength: 150
+  MaximumLineLength:
+    active: true
+    maxLineLength: 150
+    ignoreBackTickedIdentifier: false
+    excludes: [ "**/test/**/*Test.kt" ]
+  ParameterListWrapping:
+    active: true
+    autoCorrect: true
+    maxLineLength: 150
+  Filename:
+    excludes: [ "**/Responses.kt", "**/*Requests.kt" ]
+
+naming:
+  active: true
+  BooleanPropertyNaming:
+    active: true
+    excludes: [ '**/test/**' ]
+    allowedPattern: '^(is|has|are)'
+  MatchingDeclarationName:
+    active: false
+  InvalidPackageDeclaration:
+    active: false
+
+style:
+  MagicNumber:
+    active: false
+  MaxLineLength:
+    active: false
+  UnnecessaryAbstractClass:
+    active: false
+  UnusedImports:
+    active: true
+  ReturnCount:
+    active: false
+  UnusedPrivateMember:
+    excludes: [ "**/*Entity.kt", "**/Responses.kt" ]
+
+
+complexity:
+  LongParameterList:
+    excludes: [ "**/*Fixtures.kt", "**/*Entity.kt", "**/*View.kt", "**/*Controller.kt" ]
+  TooManyFunctions:
+    excludes: [ "**/*Extensions.kt" ]
+
+performance:
+  SpreadOperator:
+    excludes: [ "**/*Application.kt", "**/test/**" ]

@@ -1,0 +1,25 @@
+.gradle
+build/
+*.hprof
+!gradle/wrapper/gradle-wrapper.jar
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+*.private.env.json
+
+### OSX Specific files ###
+.DS_Store
+
+### sub-module build path ###
+*/out/
+*/build/
+*/bin/
+
+!**/src/main/**
+!**/src/test/**
+!**/src/integrationTest/**
+!**/src/testFixtures/**
